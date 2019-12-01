@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 
-from sht75_read import *
+from ffpi_sht75_read_sensor import *
 import time
 
 
 readDelay = 300    # Delay in seconds
 
 
-def getReadDelay(self):
+def get_read_delay(self):
     return readDelay
 
 
@@ -16,10 +16,10 @@ while True:
     currTime = time.strftime("%H/%M/%S")
     dateDict = {"DATE": currDate, "TIME": currTime}
     try:
-        currData = sht75_read()
+        currData = sht75_read_sensor()
     except:
         time.sleep(3)
-        currData = sht75_read()
+        currData = sht75_read_sensor()
     currData.update(dateDict)
 
     try:
