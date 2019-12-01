@@ -9,7 +9,7 @@ clkPin    = 13
 sht1x     = Sht1x(dataPin, clkPin, Sht1x.GPIO_BOARD)
 
 
-def sht75_read():
+def sht75_readSensor():
     # Read the SHT, calc absolute humidity
     SHTtemperature = sht1x.read_temperature_C()
     SHThumidity    = sht1x.read_humidity()
