@@ -24,9 +24,23 @@ TBD
 
 ## Install and configure influxdb
 
-As we gather a set of timeseries data (to display it later in grafana) we set up an influxdb:
+As we gather a set of timeseries data (to display it later in grafana) we set up an influxdb.
 
-TBD
+~~~
+sudo apt install apt-transport-https
+curl -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add -
+lsb_release -a
+# Depending on output of lsb_release:
+echo "deb https://repos.influxdata.com/debian buster stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
+sudo apt update
+sudo apt-get install influxdb
+# Disable reporting, enable IP and port
+sudo vim /etc/influxdb/influxdb.conf
+sudo systemctl restart influxdb.service
+# Create a database
+influx
+  CREATE DATABASE <db-name>
+~~~
 
 ## Install and configure grafana
 
