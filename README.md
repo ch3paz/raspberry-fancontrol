@@ -18,9 +18,11 @@ TBD
 
 # Prerequisites
 
-## Install python modules/Configure system
+## Configure system
 
-TBD
+Some of my config-files (and location) could be found in this repository beneath
+
+> ./sysconfig_files/
 
 ## Install and configure influxdb
 
