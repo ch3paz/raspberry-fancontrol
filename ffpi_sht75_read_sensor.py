@@ -42,5 +42,6 @@ def sht75_read_sensors():
                   "Tin": tval_indoor, "Tout": tval_outdoor,
                   "DPin": dval_indoor, "DPout": dval_outdoor,
                   "AHin": aval_indoor, "AHout": aval_outdoor}]
+    data_json = [data_json, ]
 
     return data_json
