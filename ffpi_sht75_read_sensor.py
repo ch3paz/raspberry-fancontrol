@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import json
+
 import math
 import time
 from sht_sensor import Sht
@@ -37,15 +37,17 @@ def sht75_read_sensors():
     dval_outdoor = format(sht_dewpoint, "2.1f")
     aval_outdoor = format(sht_absolute, "2.1f")
 
-    data_dict = {"RHin": hval_indoor, "RHout": hval_outdoor, "Tin": tval_indoor, "Tout": tval_outdoor,
-               "DPin": dval_indoor, "DPout": dval_outdoor, "AHin": aval_indoor, "AHout": aval_outdoor}
+    data_json = [{"Time": time.strftime("%Y-%m-%dT%H:%M:%S"),
+                  "RHin": hval_indoor, "RHout": hval_outdoor,
+                  "Tin": tval_indoor, "Tout": tval_outdoor,
+                  "DPin": dval_indoor, "DPout": dval_outdoor,
+                  "AHin": aval_indoor, "AHout": aval_outdoor}]
 
-    current_datetime = time.strftime("%Y-%m-%dT%H:%M:%S")
-    data_dict.update(Time=current_datetime)
-    data_json = json.dumps(data_dict)
+#    current_datetime = time.strftime("%Y-%m-%dT%H:%M:%S")
+#    data_dict.update(Time=current_datetime)
+#    data_json = json.dumps(data_dict)
 
 #    print(data_json)
     return data_json
 
-
-#sht75_read_sensors()
+# sht75_read_sensors()
