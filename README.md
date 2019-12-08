@@ -14,7 +14,13 @@ Successor of the "Fancontrol" which was based on an Atmel Mega32, but now for ra
 
 ## Pins/Ports/Wiring
 
-TBD
+Sensor indoor
+  * CLK Pin 23, GPIO 11
+  * DATA Pin 5, GPIO 3
+  
+Sensor outdoor
+  * CLK Pin 23, GPIO 11
+  * DATA Pin 3 GPIO 2
 
 # Prerequisites
 
