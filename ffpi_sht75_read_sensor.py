@@ -40,6 +40,8 @@ def sht75_read_sensors():
     csvlist = {"RHin": hval_indoor, "Tin": tval_indoor, "DPin": dval_indoor, "AHin": aval_indoor, "RHout": hval_outdoor,
                "Tout": tval_outdoor, "DPout": dval_outdoor, "AHout": aval_outdoor}
 
-    sht75_read_sensors()
     print(csvlist)
     return csvlist
+
+
+sht75_read_sensors()
