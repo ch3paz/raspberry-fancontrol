@@ -43,11 +43,4 @@ def sht75_read_sensors():
                   "DPin": dval_indoor, "DPout": dval_outdoor,
                   "AHin": aval_indoor, "AHout": aval_outdoor}]
 
-#    current_datetime = time.strftime("%Y-%m-%dT%H:%M:%S")
-#    data_dict.update(Time=current_datetime)
-#    data_json = json.dumps(data_dict)
-
-#    print(data_json)
     return data_json
-
-# sht75_read_sensors()
