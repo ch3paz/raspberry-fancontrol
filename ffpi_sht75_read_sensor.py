@@ -47,4 +47,4 @@ def sht75_read_sensors():
     return csvlist
 
 
-sht75_read_sensors()
+#sht75_read_sensors()
