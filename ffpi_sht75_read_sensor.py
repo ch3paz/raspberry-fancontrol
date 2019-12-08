@@ -41,7 +41,7 @@ def sht75_read_sensors():
                "DPin": dval_indoor, "DPout": dval_outdoor, "AHin": aval_indoor, "AHout": aval_outdoor}
 
     current_datetime = time.strftime("%Y-%m-%dT%H:%M:%S")
-    csvlist.update(current_datetime)
+    csvlist.update(Datetime=current_datetime)
 
     print(csvlist)
     return csvlist
