@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+import json
 import math
 import time
 from sht_sensor import Sht
@@ -42,10 +42,10 @@ def sht75_read_sensors():
 
     current_datetime = time.strftime("%Y-%m-%dT%H:%M:%S")
     data_dict.update(Time=current_datetime)
-    data_json = [data_dict]
+    data_json = json.dump(data_dict)
 
-#    print(data_json)
+    print(data_json)
     return data_json
 
 
-# sht75_read_sensors()
+sht75_read_sensors()
