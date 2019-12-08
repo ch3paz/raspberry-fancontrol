@@ -44,8 +44,8 @@ def sht75_read_sensors():
     data_dict.update(Time=current_datetime)
     data_json = json.dumps(data_dict)
 
-    print(data_json)
+#    print(data_json)
     return data_json
 
 
-sht75_read_sensors()
+#sht75_read_sensors()
