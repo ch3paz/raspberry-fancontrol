@@ -20,9 +20,17 @@ TBD
 
 ## Configure system
 
-Some of my config-files (and location) could be found in this repository beneath
+Some of my config-files (and location) could be found in this repository for easy copy&paste:
 
 > ./sysconfig_files/
+
+## Install sht-sensor
+
+We do this global:
+
+~~~
+sudo pip3 install sht-sensor
+~~~
 
 ## Install and configure influxdb
 
