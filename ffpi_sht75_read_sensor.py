@@ -2,11 +2,13 @@
 
 import math
 
-from sht1x.Sht1x import Sht1x
+from sht_sensor import Sht
 
-dataPin = 15
-clkPin = 13
-sht1x = Sht1x(dataPin, clkPin, Sht1x.GPIO_BOARD)
+sht_indoor = Sht(11, 2)
+sht_outdoor = Sht(11, 3)
+
+print('Temperature', sht_indoor.read_t())
+print('Relative Humidity', sht_indoor.read_rh())
 
 
 def sht75_read_sensor():
