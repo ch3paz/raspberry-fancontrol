@@ -48,4 +48,4 @@ def sht75_read_sensors():
     return data_dict
 
 
-#sht75_read_sensors()
+sht75_read_sensors()
