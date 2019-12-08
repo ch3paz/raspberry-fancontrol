@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import math
-
+import time
 from sht_sensor import Sht
 
 sht_outdoor = Sht(11, 2)
@@ -39,6 +39,11 @@ def sht75_read_sensors():
 
     csvlist = {"RHin": hval_indoor, "RHout": hval_outdoor, "Tin": tval_indoor, "Tout": tval_outdoor,
                "DPin": dval_indoor, "DPout": dval_outdoor, "AHin": aval_indoor, "AHout": aval_outdoor}
+
+    current_date = time.strftime("%d/%m/%Y")
+    current_time = time.strftime("%H/%M/%S")
+    date_dict = {"DATE": current_date, "TIME": current_time}
+    csvlist.update(date_dict)
 
     print(csvlist)
     return csvlist

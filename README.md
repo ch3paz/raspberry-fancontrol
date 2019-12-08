@@ -55,7 +55,7 @@ sudo vim /etc/influxdb/influxdb.conf
 sudo systemctl restart influxdb.service
 # Create a database
 influx
-  CREATE DATABASE <db-name>
+  CREATE DATABASE fancontrol
 ~~~
 
 ## Install and configure grafana
