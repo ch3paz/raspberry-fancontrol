@@ -37,14 +37,14 @@ def sht75_read_sensors():
     dval_outdoor = format(sht_dewpoint, "2.1f")
     aval_outdoor = format(sht_absolute, "2.1f")
 
-    csvlist = {"RHin": hval_indoor, "RHout": hval_outdoor, "Tin": tval_indoor, "Tout": tval_outdoor,
+    data_dict = {"RHin": hval_indoor, "RHout": hval_outdoor, "Tin": tval_indoor, "Tout": tval_outdoor,
                "DPin": dval_indoor, "DPout": dval_outdoor, "AHin": aval_indoor, "AHout": aval_outdoor}
 
     current_datetime = time.strftime("%Y-%m-%dT%H:%M:%S")
-    csvlist.update(Time=current_datetime)
+    data_dict.update(Time=current_datetime)
 
-    print(csvlist)
-    return csvlist
+#    print(data_dict)
+    return data_dict
 
 
 #sht75_read_sensors()
