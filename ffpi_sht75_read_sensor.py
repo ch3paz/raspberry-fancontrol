@@ -8,7 +8,7 @@ sht_indoor = Sht(11, 2)
 sht_outdoor = Sht(11, 3)
 
 
-def sht75_read_sensor():
+def sht75_read_sensors():
     # Read indoor sensor
     sht_temperature = sht_indoor.read_t()
     sht_humidity = sht_indoor.read_rh()
@@ -39,5 +39,7 @@ def sht75_read_sensor():
 
     csvlist = {"RHin": hval_indoor, "Tin": tval_indoor, "DPin": dval_indoor, "AHin": aval_indoor, "RHout": hval_outdoor,
                "Tout": tval_outdoor, "DPout": dval_outdoor, "AHout": aval_outdoor}
+
+    sht75_read_sensors()
     print(csvlist)
     return csvlist
