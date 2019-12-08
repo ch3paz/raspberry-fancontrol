@@ -37,8 +37,8 @@ def sht75_read_sensors():
     dval_outdoor = format(sht_dewpoint, "2.1f")
     aval_outdoor = format(sht_absolute, "2.1f")
 
-    csvlist = {"RHin": hval_indoor, "Tin": tval_indoor, "DPin": dval_indoor, "AHin": aval_indoor, "RHout": hval_outdoor,
-               "Tout": tval_outdoor, "DPout": dval_outdoor, "AHout": aval_outdoor}
+    csvlist = {"RHin": hval_indoor, "RHout": hval_outdoor, "Tin": tval_indoor, "Tout": tval_outdoor,
+               "DPin": dval_indoor, "DPout": dval_outdoor, "AHin": aval_indoor, "AHout": aval_outdoor}
 
     print(csvlist)
     return csvlist
