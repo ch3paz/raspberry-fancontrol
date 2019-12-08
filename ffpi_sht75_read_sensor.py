@@ -4,8 +4,8 @@ import math
 
 from sht_sensor import Sht
 
-sht_indoor = Sht(11, 2)
-sht_outdoor = Sht(11, 3)
+sht_outdoor = Sht(11, 2)
+sht_indoor = Sht(11, 3)
 
 
 def sht75_read_sensors():
