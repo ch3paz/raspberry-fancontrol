@@ -37,11 +37,11 @@ def sht75_read_sensors():
     dval_outdoor = format(sht_dewpoint, "2.1f")
     aval_outdoor = format(sht_absolute, "2.1f")
 
-    data_json = [{"Time": time.strftime("%Y-%m-%dT%H:%M:%S"),
+    data_json = {"Time": time.strftime("%Y-%m-%dT%H:%M:%S"),
                   "RHin": hval_indoor, "RHout": hval_outdoor,
                   "Tin": tval_indoor, "Tout": tval_outdoor,
                   "DPin": dval_indoor, "DPout": dval_outdoor,
-                  "AHin": aval_indoor, "AHout": aval_outdoor}]
+                  "AHin": aval_indoor, "AHout": aval_outdoor}
     data_json = [data_json, ]
 
     return data_json
