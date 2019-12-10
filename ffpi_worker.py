@@ -8,4 +8,6 @@ client = InfluxDBClient(host='localhost', port=8086)
 client.switch_database('fancontrol')
 
 data_json = sht75_read_sensors()
-client.write_points(check_condition(data_json))
+
+check_condition(data_json)
+client.write_points(data_json)
