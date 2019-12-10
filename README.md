@@ -1,6 +1,7 @@
 # fancy-fanpi
 
-Successor of the "Fancontrol" which was based on an Atmel Mega32, but now for raspberry pi.
+Successor of the [Fancontrol](https://github.com/ch3paz/uC-mega32-fancontrol) 
+which was based on an Atmel Mega32, but now for raspberry pi.
 
 # Description
 
