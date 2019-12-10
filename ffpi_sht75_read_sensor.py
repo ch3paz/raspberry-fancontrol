@@ -57,6 +57,7 @@ def sht75_read_sensors():
         }
     }]
 
+
     #   data_json = {"Time": time.strftime("%Y-%m-%dT%H:%M:%S"),
     #                 "RHin": hval_indoor, "RHout": hval_outdoor,
     #                 "Tin": tval_indoor, "Tout": tval_outdoor,
