@@ -5,7 +5,7 @@ import json
 
 def check_condition(data_json):
     # print(data_json)
-    data_dict = json.loads(data_json)
+    data_dict = str(json.loads(data_json))
 
     print(data_dict)
 
