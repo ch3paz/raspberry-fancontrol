@@ -9,6 +9,7 @@
       <w>fancontrol</w>
       <w>hout</w>
       <w>hval</w>
+      <w>influxdb</w>
       <w>tval</w>
     </words>
   </dictionary>
