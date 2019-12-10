@@ -8,10 +8,16 @@ Successor of the "Fancontrol" which was based on an Atmel Mega32, but now for ra
 * Influxdb, used for storing gathered measurements 
 * Grafana, used for visualisation
 
-## Ideas
+## More notes, ideas and more descriptive stuff
 
-* As this should be running independently everything is set up on the pi here
-
+* Everything is set up on the pi here directly (see below)
+    - python modules
+    - influxdb
+    - grafana
+* Security is **ignored by default** in this setup
+    - no SSL
+    - no users and passwords
+    
 ## Pins/Ports/Wiring
 
 Sensor indoor
@@ -60,6 +66,19 @@ influx
 
 ## Install and configure grafana
 
-For visualise the gathered data we set up grafana:
+To visualise the gathered data we set up grafana.
 
-TBD
+~~~
+sudo apt-get install -y software-properties-common wget
+# Attention: The next package depends on your architecture the pi uses!
+cd /tmp && wget https://dl.grafana.com/oss/release/grafana-rpi_6.5.1_armhf.deb
+sudo dpkg -i grafana-rpi_6.5.1_armhf.deb
+# As the package states, now
+sudo /bin/systemctl daemon-reload
+sudo /bin/systemctl enable grafana-server
+sudo /bin/systemctl start grafana-server
+# The server starts up and should be accessible after a while on port 3000.
+# First login with admin:admin then.
+~~~
+
+After login you have to set up the datasource (influxdb, http://localhost:8086) and create a dashboard.
