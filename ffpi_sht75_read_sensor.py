@@ -44,8 +44,6 @@ def sht75_read_sensors():
         "measurement": "Datacollect",
         "tags": {
             "Location": "Cellar",
-            "Sensor-1": "indoor",
-            "Sensor-2": "outdoor",
         },
         "time": time.strftime("%Y-%m-%dT%H:%M:%S"),
         "fields": {
