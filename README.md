@@ -34,7 +34,13 @@ Sensor outdoor
 
 Some of my config-files (and location) could be found in this repository for easy copy&paste:
 
-> ./sysconfig_files/
+>sysconfig_files/
+└── etc
+    ├── influxdb
+    │   └── influxdb.conf
+    └── systemd
+        └── system
+            └── fancontrol-timer.service
 
 ## Install sht-sensor
 
@@ -82,3 +88,17 @@ sudo /bin/systemctl start grafana-server
 ~~~
 
 After login you have to set up the datasource (influxdb, http://localhost:8086) and create a dashboard.
+But first gather some data - else grafana won't print nothing ;)
+
+## Run the pythonscript as timer
+
+To log data every 'n' minutes and check if it's worth to run the fans we'll set up an systemd-timer for the script.
+Example-servicefile could be found in the sysconfig_files-folder of this repository. Make shure you adapted the
+paths in there to your environment!
+
+~~~
+sudo cp sysconfig_files/etc/systemd/system/fancontrol-timer.service /etc/systemd/system/fancontrol-timer.service
+sudo cp sysconfig_files/etc/systemd/system/fancontrol-timer.timer /etc/systemd/system/fancontrol-timer.timer
+sudo systemctl start fancontrol-timer.timer
+sudo systemctl enable fancontrol-timer.timer
+~~~

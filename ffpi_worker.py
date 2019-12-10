@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from influxdb import InfluxDBClient
 from ffpi_sht75_read_sensor import sht75_read_sensors
 
