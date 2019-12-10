@@ -5,9 +5,8 @@ import json
 
 def check_condition(data_json):
     # print(data_json)
-    data_dict = (json.loads(json.dumps(data_json, indent=4, sort_keys=True)))
-    for key, value in data_dict.items():
-        print(key, value)
+    data_dict = json.loads(data_json)
+    print(data_dict)
 
     # return data_json
 
