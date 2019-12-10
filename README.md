@@ -34,13 +34,15 @@ Sensor outdoor
 
 Some of my config-files (and location) could be found in this repository for easy copy&paste:
 
->sysconfig_files/
+~~~
+sysconfig_files/
 └── etc
     ├── influxdb
     │   └── influxdb.conf
     └── systemd
         └── system
             └── fancontrol-timer.service
+~~~
 
 ## Install sht-sensor
 
