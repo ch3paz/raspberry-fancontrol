@@ -38,10 +38,12 @@ def check_condition(data_json):
         # Fan ON (Relais CH1 ON)
         GPIO.output(Relay_Ch1, GPIO.LOW)
         fanstatus = 1
+        data_dict["Fan"] = 1
     else:
         # Fan OFF (Relais CH1 OFF)
         GPIO.output(Relay_Ch1, GPIO.HIGH)
         fanstatus = 0
+        data_dict["Fan"] = 0
 
     print(data_dict["Fan"])
 
