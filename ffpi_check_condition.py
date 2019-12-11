@@ -1,10 +1,9 @@
 #!/usr/bin/env python
+
 import RPi.GPIO as GPIO
 import time
 
 # Setup for the relais-board
-from importlib_metadata.tests import data
-
 Relay_Ch1 = 26
 Relay_Ch2 = 20
 Relay_Ch3 = 21
@@ -46,6 +45,7 @@ def check_condition(data_json):
         data_dict["Fan"] = 0
 
     print(data_dict)
+
     updated_json = [{
         "measurement": "Datacollect",
         "tags": {
