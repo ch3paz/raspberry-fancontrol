@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 import RPi.GPIO as GPIO
+import time
 
 # Setup for the relais-board
+from importlib_metadata.tests import data
+
 Relay_Ch1 = 26
 Relay_Ch2 = 20
 Relay_Ch3 = 21
@@ -43,13 +46,25 @@ def check_condition(data_json):
         data_dict["Fan"] = 0
 
     print(data_dict)
+    updated_json = [{
+        "measurement": "Datacollect",
+        "tags": {
+            "Location": "Cellar",
+        },
+        "time": time.strftime("%Y-%m-%dT%H:%M:%S"),
+        "fields": {
+            "RHin": data_dict.get("RHin"),
+            "RHout": data_dict.get("RHout"),
+            "Tin": data_dict.get("Tin"),
+            "Tout": data_dict.get("Tout"),
+            "DPin": data_dict.get("DPin"),
+            "DPout": data_dict.get("DPout"),
+            "AHin": data_dict.get("AHin"),
+            "AHout": data_dict.get("AHout"),
+            "Fan": data_dict.get("Fan")
+        }
+    }]
 
+    print(updated_json)
 
-# This is the condition from original uC-fancontrol
-"""
-if (
-  ((haIn-haOut) >= values.min_ha_diff) &&
-  (rhIn > values.min_rh) &&
-  (tempIn > values.min_temp) &&
-  (tempIn >= (tempOut - values.deltaTD))
-"""
+    return updated_json
