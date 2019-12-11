@@ -9,6 +9,9 @@ from sht_sensor import Sht
 sht_outdoor = Sht(11, 2)
 sht_indoor = Sht(11, 3)
 
+# Fan ON = 1, OFF =0, UNDEFINED = 2
+fanstatus = 2
+
 
 def sht75_read_sensors():
     # Read indoor sensor
@@ -54,7 +57,8 @@ def sht75_read_sensors():
             "DPin": dval_indoor,
             "DPout": dval_outdoor,
             "AHin": aval_indoor,
-            "AHout": aval_outdoor
+            "AHout": aval_outdoor,
+            "Fan": fanstatus
         }
     }]
 

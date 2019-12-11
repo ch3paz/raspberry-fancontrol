@@ -26,19 +26,25 @@ tmin = 14
 
 def check_condition(data_json):
     for i in data_json:
-        data_list = i.get("fields")
+        data_dict = i.get("fields")
 
-    rhin = float(data_list.get("RHin"))
-    tin = float(data_list.get("Tin"))
-    ahin = float(data_list.get("AHin"))
-    ahout = float(data_list.get("AHout"))
+    rhin = float(data_dict.get("RHin"))
+    tin = float(data_dict.get("Tin"))
+    ahin = float(data_dict.get("AHin"))
+    ahout = float(data_dict.get("AHout"))
+    fanstatus = 2
 
     if ((ahin - ahout) >= ahdiff) and (rhin > rhmin) and (tin > tmin):
         # Fan ON (Relais CH1 ON)
         GPIO.output(Relay_Ch1, GPIO.LOW)
+        fanstatus = 1
     else:
         # Fan OFF (Relais CH1 OFF)
         GPIO.output(Relay_Ch1, GPIO.HIGH)
+        fanstatus = 0
+
+    print(data_dict["Fan"])
+
 
 # This is the condition from original uC-fancontrol
 """

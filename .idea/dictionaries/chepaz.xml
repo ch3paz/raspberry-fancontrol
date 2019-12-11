@@ -10,6 +10,7 @@
       <w>dewpoint</w>
       <w>dval</w>
       <w>fancontrol</w>
+      <w>fanstatus</w>
       <w>gpio</w>
       <w>hout</w>
       <w>hval</w>
