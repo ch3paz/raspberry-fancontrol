@@ -1,15 +1,24 @@
 <component name="ProjectDictionaryState">
   <dictionary name="chepaz">
     <words>
+      <w>ahdiff</w>
+      <w>ahin</w>
+      <w>ahout</w>
       <w>aval</w>
       <w>csvlist</w>
       <w>datacollect</w>
       <w>dewpoint</w>
       <w>dval</w>
       <w>fancontrol</w>
+      <w>fanstatus</w>
+      <w>gpio</w>
       <w>hout</w>
       <w>hval</w>
       <w>influxdb</w>
+      <w>relais</w>
+      <w>rhin</w>
+      <w>rhmin</w>
+      <w>tmin</w>
       <w>tval</w>
     </words>
   </dictionary>
