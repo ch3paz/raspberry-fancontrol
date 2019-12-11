@@ -9,9 +9,9 @@ Relay_Ch3 = 21
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 
-GPIO.setup(Relay_Ch1,GPIO.OUT)
-GPIO.setup(Relay_Ch2,GPIO.OUT)
-GPIO.setup(Relay_Ch3,GPIO.OUT)
+GPIO.setup(Relay_Ch1, GPIO.OUT)
+GPIO.setup(Relay_Ch2, GPIO.OUT)
+GPIO.setup(Relay_Ch3, GPIO.OUT)
 
 # Predefined minimums
 #
