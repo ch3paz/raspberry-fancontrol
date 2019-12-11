@@ -1,0 +1,8 @@
+[Unit]
+Description=Runs the fancontrol python script
+
+[Service]
+Type=simple
+User=chepaz
+Group=chepaz
+ExecStart=/home/chepaz/projects/fancy-fanpi/ffpi_worker.py
