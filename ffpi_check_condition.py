@@ -22,7 +22,7 @@ GPIO.setup(Relay_Ch3, GPIO.OUT)
 # tmin = the minimum temperature we would like to have (in degrees C)
 
 ahdiff = 0.5
-rhmin = 65
+rhmin = 70
 tmin = 14
 
 
