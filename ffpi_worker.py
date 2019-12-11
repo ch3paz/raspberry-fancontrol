@@ -9,6 +9,4 @@ client.switch_database('fancontrol')
 
 data_json = sht75_read_sensors()
 
-# TODO How?
-# check_condition(data_json)
-client.write_points(data_json)
+client.write_points(check_condition(data_json))
