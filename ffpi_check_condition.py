@@ -10,14 +10,15 @@ ahdiff = 0.5
 rhmin = 65
 tmin = 14
 
+
 def check_condition(data_json):
     for i in data_json:
         data_list = i.get("fields")
 
-    rhin = data_list.get("RHin")
-    tin = data_list.get("Tin")
-    ahin = data_list.get("AHin")
-    ahout = data_list.get("AHout")
+    rhin = float(data_list.get("RHin"))
+    tin = float(data_list.get("Tin"))
+    ahin = float(data_list.get("AHin"))
+    ahout = float(data_list.get("AHout"))
 
     if ((ahin-ahout) >= ahdiff) and (rhin > rhmin) and (tin > tmin):
         print("Fan ON")
