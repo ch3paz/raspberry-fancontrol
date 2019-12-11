@@ -44,8 +44,6 @@ def check_condition(data_json):
         GPIO.output(Relay_Ch1, GPIO.HIGH)
         data_dict["Fan"] = 0
 
-    print(data_dict)
-
     updated_json = [{
         "measurement": "Datacollect",
         "tags": {
@@ -64,7 +62,5 @@ def check_condition(data_json):
             "Fan": data_dict.get("Fan")
         }
     }]
-
-    print(updated_json)
 
     return updated_json
