@@ -1,4 +1,17 @@
 #!/usr/bin/env python
+import RPi.GPIO as GPIO
+
+# Setup for the relais-board
+Relay_Ch1 = 26
+Relay_Ch2 = 20
+Relay_Ch3 = 21
+
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BCM)
+
+GPIO.setup(Relay_Ch1,GPIO.OUT)
+GPIO.setup(Relay_Ch2,GPIO.OUT)
+GPIO.setup(Relay_Ch3,GPIO.OUT)
 
 # Predefined minimums
 #
@@ -20,10 +33,12 @@ def check_condition(data_json):
     ahin = float(data_list.get("AHin"))
     ahout = float(data_list.get("AHout"))
 
-    if ((ahin-ahout) >= ahdiff) and (rhin > rhmin) and (tin > tmin):
-        print("Fan ON")
+    if ((ahin - ahout) >= ahdiff) and (rhin > rhmin) and (tin > tmin):
+        # Fan ON (Relais CH1 ON)
+        GPIO.output(Relay_Ch1, GPIO.LOW)
     else:
-        print("Fan OFF")
+        # Fan OFF (Relais CH1 OFF)
+        GPIO.output(Relay_Ch1, GPIO.HIGH)
 
 # This is the condition from original uC-fancontrol
 """
