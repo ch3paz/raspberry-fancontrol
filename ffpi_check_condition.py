@@ -2,6 +2,7 @@
 
 import RPi.GPIO as GPIO
 import time
+import configparser
 
 # Setup for the relais-board
 Relay_Ch1 = 26
@@ -15,15 +16,14 @@ GPIO.setup(Relay_Ch1, GPIO.OUT)
 GPIO.setup(Relay_Ch2, GPIO.OUT)
 GPIO.setup(Relay_Ch3, GPIO.OUT)
 
-# Predefined minimums
-#
-# ahdiff = a minimum difference of AHin-AHout should be (in g/m³)
-# rhmin = the minimum humidity we would like to have (relative humidity in %)
-# tmin = the minimum temperature we would like to have (in degrees C)
+# Read settings from file
+ffpi_configparser = configparser.RawConfigParser()
+ffpi_configfilepath = r'ffpi_settings.config'
+ffpi_configparser.read(ffpi_configfilepath)
 
-ahdiff = 0.5
-rhmin = 65
-tmin = 14
+ahdiff = float(ffpi_configparser.get('ffpi_condition_settings', 'ahdiff'))
+rhmin = float(ffpi_configparser.get('ffpi_condition_settings', 'rhmin'))
+tmin = float(ffpi_configparser.get('ffpi_condition_settings', 'tmin'))
 
 
 def check_condition(data_json):
