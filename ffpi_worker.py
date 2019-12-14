@@ -9,7 +9,7 @@ ffpi_configparser = configparser.RawConfigParser()
 ffpi_configfilepath = r'ffpi_settings.config'
 ffpi_configparser.read(ffpi_configfilepath)
 
-dbhostname = ffpi_configparser.get('ffpi_influxdb_settings', 'dbhostame')
+dbhostname = ffpi_configparser.get('ffpi_influxdb_settings', 'dbhostname')
 dbport = ffpi_configparser.get('ffpi_influxdb_settings', 'dbport')
 dbname = ffpi_configparser.get('ffpi_influxdb_settings', 'dbname')
 
