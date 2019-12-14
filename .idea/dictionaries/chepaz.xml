@@ -9,6 +9,9 @@
       <w>configparser</w>
       <w>csvlist</w>
       <w>datacollect</w>
+      <w>dbhostame</w>
+      <w>dbhostname</w>
+      <w>dbport</w>
       <w>dewpoint</w>
       <w>dval</w>
       <w>fancontrol</w>

@@ -23,12 +23,6 @@ ffpi_configparser.read(ffpi_configfilepath)
 ahdiff = float(ffpi_configparser.get('ffpi_condition_settings', 'ahdiff'))
 rhmin = float(ffpi_configparser.get('ffpi_condition_settings', 'rhmin'))
 tmin = float(ffpi_configparser.get('ffpi_condition_settings', 'tmin'))
-print(ahdiff, rhmin, tmin)
-
-# TODO Remove
-#ahdiff = 0.5
-#rhmin = 70
-#tmin = 14.8
 
 
 def check_condition(data_json):
