@@ -19,7 +19,7 @@ sht_sensor_2_data = ffpi_configparser.get('ffpi_sht75_settings', 'sht_sensor_2_d
 sht_outdoor = Sht(sht_sensor_clock, sht_sensor_1_data)
 sht_indoor = Sht(sht_sensor_clock, sht_sensor_2_data)
 
-# Fan ON = 1, OFF =0, UNDEFINED = 2 #FIXME remove it?
+# Fan ON = 1, OFF =0, UNDEFINED = 2
 fanstatus = 2
 
 
