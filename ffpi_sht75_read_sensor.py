@@ -7,7 +7,7 @@ from sht_sensor import Sht
 
 # Read settings from file
 ffpi_configparser = configparser.RawConfigParser()
-ffpi_configfilepath = r'/home/chepaz/projects/fancy-fanpi/ffpi_settings.config'
+ffpi_configfilepath = r'ffpi_settings.config'
 ffpi_configparser.read(ffpi_configfilepath)
 
 sht_sensor_clock = int(ffpi_configparser.get('ffpi_sht_settings', 'sensorclockpin'))
