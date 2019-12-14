@@ -10,9 +10,9 @@ ffpi_configparser = configparser.RawConfigParser()
 ffpi_configfilepath = r'ffpi_settings.config'
 ffpi_configparser.read(ffpi_configfilepath)
 
-sht_sensor_clock = ffpi_configparser.get('ffpi_sht75_settings', 'sht_sensor_clock')
-sht_sensor_1_data = ffpi_configparser.get('ffpi_sht75_settings', 'sht_sensor_1_data')
-sht_sensor_2_data = ffpi_configparser.get('ffpi_sht75_settings', 'sht_sensor_2_data')
+sht_sensor_clock = int(ffpi_configparser.get('ffpi_sht75_settings', 'sht_sensor_clock'))
+sht_sensor_1_data = int(ffpi_configparser.get('ffpi_sht75_settings', 'sht_sensor_1_data'))
+sht_sensor_2_data = int(ffpi_configparser.get('ffpi_sht75_settings', 'sht_sensor_2_data'))
 
 # Config the pins where the SHT75 are connected
 # Sht(clockpin, datapin)
