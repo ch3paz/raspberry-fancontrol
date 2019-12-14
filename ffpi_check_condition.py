@@ -20,9 +20,9 @@ ffpi_configparser = configparser.RawConfigParser()
 ffpi_configfilepath = r'ffpi_settings.config'
 ffpi_configparser.read(ffpi_configfilepath)
 
-ahdiff = ffpi_configparser.get('ffpi_condition_settings', 'ahdiff')
-rhmin = ffpi_configparser.get('ffpi_condition_settings', 'rhmin')
-tmin = ffpi_configparser.get('ffpi_condition_settings', 'tmin')
+ahdiff = float(ffpi_configparser.get('ffpi_condition_settings', 'ahdiff'))
+rhmin = float(ffpi_configparser.get('ffpi_condition_settings', 'rhmin'))
+tmin = float(ffpi_configparser.get('ffpi_condition_settings', 'tmin'))
 print(ahdiff, rhmin, tmin)
 
 # TODO Remove
