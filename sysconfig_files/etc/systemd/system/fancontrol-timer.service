@@ -5,4 +5,5 @@ Description=Runs the fancontrol python script
 Type=simple
 User=chepaz
 Group=chepaz
+WorkingDirectory=/home/chepaz/projects/fancy-fanpi/
 ExecStart=/home/chepaz/projects/fancy-fanpi/ffpi_worker.py

@@ -5,6 +5,7 @@
       <w>ahin</w>
       <w>ahout</w>
       <w>aval</w>
+      <w>chepaz</w>
       <w>clockpin</w>
       <w>configfilepath</w>
       <w>configparser</w>
@@ -18,6 +19,7 @@
       <w>dewpoint</w>
       <w>dval</w>
       <w>fancontrol</w>
+      <w>fanpi</w>
       <w>fanstatus</w>
       <w>ffpi</w>
       <w>gpio</w>
@@ -27,6 +29,8 @@
       <w>relais</w>
       <w>rhin</w>
       <w>rhmin</w>
+      <w>sensorclock</w>
+      <w>sensorclockpin</w>
       <w>tmin</w>
       <w>tval</w>
     </words>
