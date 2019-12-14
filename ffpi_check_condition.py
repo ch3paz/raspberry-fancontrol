@@ -26,8 +26,8 @@ tmin = ffpi_configparser.get('ffpi_condition_settings', 'tmin')
 print(ahdiff, rhmin, tmin)
 
 ahdiff = 0.5
-rhmin = 72
-tmin = 14
+rhmin = 70
+tmin = 14.8
 
 
 def check_condition(data_json):
