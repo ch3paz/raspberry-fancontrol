@@ -26,7 +26,7 @@ tmin = ffpi_configparser.get('ffpi_condition_settings', 'tmin')
 print(ahdiff, rhmin, tmin)
 
 ahdiff = 0.5
-rhmin = 65
+rhmin = 72
 tmin = 14
 
 
