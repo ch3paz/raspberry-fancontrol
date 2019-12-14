@@ -5,12 +5,15 @@
       <w>ahin</w>
       <w>ahout</w>
       <w>aval</w>
+      <w>configfilepath</w>
+      <w>configparser</w>
       <w>csvlist</w>
       <w>datacollect</w>
       <w>dewpoint</w>
       <w>dval</w>
       <w>fancontrol</w>
       <w>fanstatus</w>
+      <w>ffpi</w>
       <w>gpio</w>
       <w>hout</w>
       <w>hval</w>
