@@ -11,7 +11,7 @@ which was based on an Atmel Mega32, but now for raspberry pi.
 
 ## More notes, ideas and more descriptive stuff
 
-* Everything is set up on the pi here directly (see below)
+* Everything is set up on the pi here directly (see instructions below)
     - python modules
     - influxdb
     - grafana
@@ -19,15 +19,12 @@ which was based on an Atmel Mega32, but now for raspberry pi.
     - no SSL
     - no users and passwords
     
-## Pins/Ports/Wiring
+## Pins/Ports/Wiring/Settings
 
-Sensor indoor
-  * CLK Pin 23, GPIO 11
-  * DATA Pin 5, GPIO 3
-  
-Sensor outdoor
-  * CLK Pin 23, GPIO 11
-  * DATA Pin 3 GPIO 2
+See the comments in the file
+* ffpi_settings.config
+
+All settings have to be done there.
 
 # Prerequisites
 
