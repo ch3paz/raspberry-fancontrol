@@ -11,8 +11,8 @@ ffpi_configfilepath = r'ffpi_settings.config'
 ffpi_configparser.read(ffpi_configfilepath)
 
 sht_sensor_clock = int(ffpi_configparser.get('ffpi_sht_settings', 'sensorclock'))
-sht_sensor_1_data = int(ffpi_configparser.get('ffpi_sht_settings', 'sensor1data'))
-sht_sensor_2_data = int(ffpi_configparser.get('ffpi_sht_settings', 'sensor2data'))
+sht_sensor_1_data = int(ffpi_configparser.get('ffpi_sht_settings', 'sensor1datapin'))
+sht_sensor_2_data = int(ffpi_configparser.get('ffpi_sht_settings', 'sensor2datapin'))
 
 # Config the pins where the SHT75 are connected
 # Sht(clockpin, datapin)
