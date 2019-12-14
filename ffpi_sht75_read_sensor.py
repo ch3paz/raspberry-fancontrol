@@ -22,6 +22,9 @@ sht_indoor = Sht(sht_sensor_clock, sht_sensor_2_data)
 # Fan ON = 1, OFF =0, UNDEFINED = 2
 fanstatus = 2
 
+# Fan ON = 1, OFF =0, UNDEFINED = 2
+fanstatus = 2
+
 
 def sht75_read_sensors():
     # Read indoor sensor
