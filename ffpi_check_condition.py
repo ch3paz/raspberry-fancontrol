@@ -16,6 +16,7 @@ GPIO.setup(Relay_Ch1, GPIO.OUT)
 GPIO.setup(Relay_Ch2, GPIO.OUT)
 GPIO.setup(Relay_Ch3, GPIO.OUT)
 
+# Read settings from file
 ffpi_configparser = configparser.RawConfigParser()
 ffpi_configfilepath = r'ffpi_settings.config'
 ffpi_configparser.read(ffpi_configfilepath)

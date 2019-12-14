@@ -2,14 +2,24 @@
 
 import math
 import time
+import configparser
 from sht_sensor import Sht
+
+# Read settings from file
+ffpi_configparser = configparser.RawConfigParser()
+ffpi_configfilepath = r'ffpi_settings.config'
+ffpi_configparser.read(ffpi_configfilepath)
+
+sht_sensor_clock = ffpi_configparser.get('ffpi_sht75_settings', 'sht_sensor_clock')
+sht_sensor_1_data = ffpi_configparser.get('ffpi_sht75_settings', 'sht_sensor_1_data')
+sht_sensor_2_data = ffpi_configparser.get('ffpi_sht75_settings', 'sht_sensor_2_data')
 
 # Config the pins where the SHT75 are connected
 # Sht(clockpin, datapin)
-sht_outdoor = Sht(11, 2)
-sht_indoor = Sht(11, 3)
+sht_outdoor = Sht(sht_sensor_clock, sht_sensor_1_data)
+sht_indoor = Sht(sht_sensor_clock, sht_sensor_2_data)
 
-# Fan ON = 1, OFF =0, UNDEFINED = 2
+# Fan ON = 1, OFF =0, UNDEFINED = 2 #FIXME remove it?
 fanstatus = 2
 
 

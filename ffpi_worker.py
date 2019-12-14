@@ -5,6 +5,7 @@ from influxdb import InfluxDBClient
 from ffpi_sht75_read_sensor import sht75_read_sensors
 from ffpi_check_condition import check_condition
 
+# Read settings from file
 ffpi_configparser = configparser.RawConfigParser()
 ffpi_configfilepath = r'ffpi_settings.config'
 ffpi_configparser.read(ffpi_configfilepath)
