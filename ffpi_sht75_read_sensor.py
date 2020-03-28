@@ -60,15 +60,15 @@ def sht75_read_sensors():
         },
         "time": time.strftime("%Y-%m-%dT%H:%M:%S"),
         "fields": {
-            "RHin": hval_indoor,
-            "RHout": hval_outdoor,
-            "Tin": tval_indoor,
-            "Tout": tval_outdoor,
-            "DPin": dval_indoor,
-            "DPout": dval_outdoor,
-            "AHin": aval_indoor,
-            "AHout": aval_outdoor,
-            "Fan": fanstatus
+            "RHin": float(hval_indoor),
+            "RHout": float(hval_outdoor),
+            "Tin": float(tval_indoor),
+            "Tout": float(tval_outdoor),
+            "DPin": float(dval_indoor),
+            "DPout": float(dval_outdoor),
+            "AHin": float(aval_indoor),
+            "AHout": float(aval_outdoor),
+            "Fan": float(fanstatus)
         }
     }]
 
